@@ -26,9 +26,9 @@ def get_move(oponents_last_move: str, port: int) -> str:
             ).json()['my_move']
 
 
-def play() -> None:
-    player_a = get_player('player_a', 'test', 6969)
-    player_b = get_player('player_b', 'test', 9696)
+def play(image_a: str, image_b: str) -> None:
+    player_a = get_player('player_a', image_a, 6969)
+    player_b = get_player('player_b', image_b, 9696)
 
     # give time to startup the containers
     sleep(1)
