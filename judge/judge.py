@@ -18,11 +18,11 @@ def get_player(name: str, image: str, port: int) -> Container:
         raise ValueError('Not an instastance of Container')
     return container
 
-def get_move(oponents_last_move: str, port: int) -> str:
+def get_move(opponents_last_move: str, port: int) -> str:
     return requests.post(
             f'http://localhost:{port}/',
             headers={'Content-type': 'text/json'},
-            json={'oponents_last_move': oponents_last_move}
+            json={'opponents_last_move': opponents_last_move}
             ).json()['my_move']
 
 
